@@ -18,6 +18,7 @@ class player{
     func stream (fileURL: String){
         let url = NSURL(string: fileURL)
         avPlayer = AVPlayer(url: url! as URL)
+       // setplayingScreen(fileUrl: fileURL)
         //avPlayer.play()
     }
     func playAudio(){
@@ -30,4 +31,12 @@ class player{
             avPlayer.pause()
         }
     }
+  /*  func setplayingScreen(fileUrl: String){
+        let urlArr = fileUrl.components(separatedBy: "/")
+        let name = urlArr[urlArr.endIndex-1]
+        print(name)
+        let songInfo = [MPMediaItemPropertyTitle: name,
+                        MPMediaItemPropertyArtist: "Penny plu"]
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = songInfo
+    }*/
 }
